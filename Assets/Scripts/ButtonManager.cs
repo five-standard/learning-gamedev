@@ -18,4 +18,14 @@ public class ButtonManager : MonoBehaviour
         Application.Quit();
     #endif
     }
+
+    public void ReTryButton()
+    {
+        SceneManager.LoadScene("Ingame");
+    }
+
+    public void MainMenuButton()
+    {
+        SceneManager.LoadScene("MainMenu");
+    }
 }

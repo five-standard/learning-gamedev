@@ -6,7 +6,7 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 using System.Threading;
- //ㅆ
+
 public class Player : MonoBehaviour
 {
     [SerializeField] private float Speed;
@@ -21,16 +21,29 @@ public class Player : MonoBehaviour
     private void Start()
     {
         HPtext.text = "HP (100%)";
-        DRtext.text = "Durability (100%)";
+        DRtext.text = "Fuel (100%)";
+        StartCoroutine(DurabilityCor());
         //while (durability > 0)
         //{
-            //Thread.Sleep(1000);
-            //durability--;
-            //DRtext.text = "Durability (" + durability + "%)";
-            //DRSl.value = durability;
+        //Thread.Sleep(1000);
+        //durability--;
+        //DRtext.text = "Durability (" + durability + "%)";
+        //DRSl.value = durability;
         //}
     }
 
+    IEnumerator DurabilityCor()
+    {
+        durability--;
+        if (durability == 0)
+        {
+            SceneManager.LoadScene("End");
+        }
+        DRtext.text = "Fuel (" + durability + "%)";
+        DRSl.value = durability;
+        yield return new WaitForSeconds((float)0.65);
+        StartCoroutine(DurabilityCor());
+    }
     void Update()
     {
         float X = Input.GetAxisRaw("Horizontal");
@@ -65,10 +78,10 @@ public class Player : MonoBehaviour
             Destroy(col.gameObject);
             if (hp > 0)
             {
-                hp -= 5;
+                hp -= 100;
                 if (hp == 0)
                 {
-                    SceneManager.LoadScene("None");
+                    SceneManager.LoadScene("End");
                 }
                 HPtext.text = "HP (" + hp + "%)";
                 HPSl.value = hp;

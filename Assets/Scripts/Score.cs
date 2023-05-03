@@ -3,12 +3,13 @@ using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Score : MonoBehaviour
 {
     public static Score instance;
     [SerializeField] public TextMeshProUGUI Scoretext;
-    [SerializeField] private int score = 0;
+    public static float score;
 
     void Awake()
     {
@@ -18,6 +19,7 @@ public class Score : MonoBehaviour
 
     private void Start()
     {
+        score = 0;
         Scoretext.text = "0 Score";
     }
 
