@@ -1,15 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="f3cdd046-277b-4991-9d51-07ab9ab5616a" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Shooting/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Shooting/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Ingame.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Ingame.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/MainMenu.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/MainMenu.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/ButtonManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/ButtonManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Score.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Score.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" afterDir="false" />
-    </list>
+    <list default="true" id="f3cdd046-277b-4991-9d51-07ab9ab5616a" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -37,6 +29,7 @@
   </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Bullet.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="mock://C:/Users/user/Documents/Repositories/Shooting/Assets/Scripts/ButtonManager.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/EndCode.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Enemy.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Player.cs" root0="FORCE_HIGHLIGHTING" />
@@ -128,7 +121,7 @@
       <workItem from="1682914876240" duration="11893000" />
       <workItem from="1683014742302" duration="2778000" />
       <workItem from="1683022546210" duration="706000" />
-      <workItem from="1683118872244" duration="2678000" />
+      <workItem from="1683118872244" duration="2881000" />
     </task>
     <task id="LOCAL-00001" summary="유니티 파일 추가 (시작)&#10;+ 기본 UI 제작 (메인메뉴, 조작법, 인게임)&#10;+ 버튼매니저 제작">
       <created>1682864062099</created>
@@ -165,7 +158,14 @@
       <option name="project" value="LOCAL" />
       <updated>1683022594801</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="엔드씬과 연료 추가">
+      <created>1683121715228</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1683121715228</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -207,6 +207,7 @@
     <MESSAGE value="Unity Files" />
     <MESSAGE value="ㅆ Added" />
     <MESSAGE value="Unity File added" />
-    <option name="LAST_COMMIT_MESSAGE" value="Unity File added" />
+    <MESSAGE value="엔드씬과 연료 추가" />
+    <option name="LAST_COMMIT_MESSAGE" value="엔드씬과 연료 추가" />
   </component>
 </project>

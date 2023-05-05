@@ -28,4 +28,9 @@ public class ButtonManager : MonoBehaviour
     {
         SceneManager.LoadScene("MainMenu");
     }
+    
+    public void RankingButton()
+        {
+            SceneManager.LoadScene("Ranking");
+        }
 }
