@@ -13,7 +13,7 @@ public class Player : MonoBehaviour
     [SerializeField] private GameObject missilePrefab;
     [SerializeField] private float launchSpeed = 10.0f;
     [SerializeField] private Slider HPSl;
-    [SerializeField] private float hp = 100f;
+    public static float hp = 100f;
     [SerializeField] TextMeshProUGUI HPtext;
     [SerializeField] private float durability = 100f;
     [SerializeField] private Slider DRSl;
@@ -60,13 +60,8 @@ public class Player : MonoBehaviour
 
         if (Input.GetButtonDown("Jump"))
         {
-            // 프리팹으로부터 새로운 미사일 게임 오브젝트 생성
             GameObject missile = Instantiate(missilePrefab, transform.position, transform.rotation);
-
-            // 미사일로부터 리지드바디 2D 컴포넌트 가져옴
             Rigidbody2D rb = missile.GetComponent<Rigidbody2D>();
-
-            // 미사일을 전방으로 발사
             rb.AddForce(transform.up * launchSpeed, ForceMode2D.Impulse);
         }
     }
@@ -78,7 +73,7 @@ public class Player : MonoBehaviour
             Destroy(col.gameObject);
             if (hp > 0)
             {
-                hp -= 100;
+                hp -= 5;
                 if (hp == 0)
                 {
                     SceneManager.LoadScene("End");

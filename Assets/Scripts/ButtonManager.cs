@@ -18,7 +18,7 @@ public class ButtonManager : MonoBehaviour
         Application.Quit();
     #endif
     }
-
+    
     public void ReTryButton()
     {
         SceneManager.LoadScene("Ingame");

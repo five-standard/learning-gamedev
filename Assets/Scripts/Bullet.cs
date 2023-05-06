@@ -10,11 +10,13 @@ public class Bullet : MonoBehaviour
     {
         Destroy(gameObject);
     }
+
     void OnTriggerEnter2D(Collider2D other)
     {
-        if(other.tag.Equals("Enemy")){
+        if (other.tag.Equals("Enemy"))
+        {
             Destroy(other.gameObject);
-            Destroy(this.gameObject); 
+            Destroy(this.gameObject);
             Score.instance.addscore(100);
         }
     }
