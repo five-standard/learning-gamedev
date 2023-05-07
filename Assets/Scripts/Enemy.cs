@@ -8,7 +8,6 @@ public class Enemy : MonoBehaviour
 {
     [SerializeField] private float moveSpeed;
     [SerializeField] private GameObject bullet;
-    [SerializeField] private float launchSpeed = 10.0f;
 
     private void Start()
     {
@@ -27,15 +26,13 @@ public class Enemy : MonoBehaviour
 
     private IEnumerator Shoot()
     {
+        yield return new WaitForSeconds(Random.Range((float)0.5, (float)1.5));
         GameObject missile = Instantiate(bullet, transform.position, transform.rotation);
-        float distanceY = launchSpeed * Time.deltaTime;
-        missile.gameObject.transform.Translate(0, -1 * distanceY, 0);
-        yield return new WaitForSeconds((float)1.5);
         StartCoroutine(Shoot());
     }
 
     private void OnBecameInvisible()
     {
-        Destroy(gameObject);
+        Destroy(this.gameObject);
     }
 }
