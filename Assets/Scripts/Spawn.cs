@@ -7,7 +7,7 @@ public class Spawn : MonoBehaviour
     [SerializeField] private GameObject enemy;
     [SerializeField] private float times;
     // Start is called before the first frame update
-    void Start()
+    void Awake()
     {
         StartCoroutine(SpawnEnemy());
     }

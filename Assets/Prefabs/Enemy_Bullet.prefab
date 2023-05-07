@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5552578005936428867}
   - component: {fileID: 5200726028803839698}
-  - component: {fileID: 793255946396457289}
+  - component: {fileID: 226143271666171818}
   m_Layer: 0
   m_Name: Enemy_Bullet
   m_TagString: Untagged
@@ -85,7 +85,7 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &793255946396457289
+--- !u!114 &226143271666171818
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}

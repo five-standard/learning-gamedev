@@ -4,10 +4,12 @@
     <list default="true" id="f3cdd046-277b-4991-9d51-07ab9ab5616a" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Shooting/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Shooting/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Enemy.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Enemy.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Enemy_Bullet.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Enemy_Bullet.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/Ingame.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Ingame.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Enemy.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Enemy.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/EnemyBullet.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/EnemyBullet.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Spawn.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Spawn.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -131,7 +133,8 @@
       <workItem from="1683297087205" duration="971000" />
       <workItem from="1683383058137" duration="1934000" />
       <workItem from="1683385042563" duration="60000" />
-      <workItem from="1683465919586" duration="2105000" />
+      <workItem from="1683465919586" duration="2172000" />
+      <workItem from="1683468383436" duration="667000" />
     </task>
     <task id="LOCAL-00001" summary="유니티 파일 추가 (시작)&#10;+ 기본 UI 제작 (메인메뉴, 조작법, 인게임)&#10;+ 버튼매니저 제작">
       <created>1682864062099</created>
@@ -189,7 +192,14 @@
       <option name="project" value="LOCAL" />
       <updated>1683385091325</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="시도는 했지만 아직도 적 미사일 발사 구현중">
+      <created>1683468107702</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1683468107702</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -234,6 +244,7 @@
     <MESSAGE value="엔드씬과 연료 추가" />
     <MESSAGE value="랭킹 씬 추가" />
     <MESSAGE value="적 캐릭터 미사일 발사 구현중" />
-    <option name="LAST_COMMIT_MESSAGE" value="적 캐릭터 미사일 발사 구현중" />
+    <MESSAGE value="시도는 했지만 아직도 적 미사일 발사 구현중" />
+    <option name="LAST_COMMIT_MESSAGE" value="시도는 했지만 아직도 적 미사일 발사 구현중" />
   </component>
 </project>
