@@ -11,5 +11,5 @@ public class E_Bullet : MonoBehaviour
         if (col.tag.Equals("Enemy")) {
             Destroy(col.gameObject);
             Destroy(gameObject);
-            G_VMng.instance.addscore(100); } }
+            G_Score.instance.addscore(G_Score.scoreToAdd); } }
 }

@@ -2,27 +2,16 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f3cdd046-277b-4991-9d51-07ab9ab5616a" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Shooting/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Shooting/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/ControlHelp.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/ControlHelp.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/End.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/End.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/Ingame.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Ingame.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Bullet.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Bullet.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/ButtonManager.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/ButtonManager.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/EndCode.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/EndCode.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Enemy.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Enemy.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/HelpScene.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/HelpScene.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Score.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Score.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Spawn.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Spawn.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/E_Bullet.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/E_Bullet.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/E_Enemy.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/E_Enemy.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/E_Player.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/E_Player.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/G_Score.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/G_Score.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/G_Spawn.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/G_Spawn.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/G_VMng.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/G_VMng.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/S_End.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/S_End.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -50,6 +39,8 @@
     </option>
   </component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/E_Boss.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/E_Inven.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$USER_HOME$/My project/Assets/Script/EndCode.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$USER_HOME$/My project/Assets/Script/PlayerControl.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$USER_HOME$/My project/Assets/Script/Poop.cs" root0="SKIP_HIGHLIGHTING" />
@@ -143,7 +134,9 @@
       <workItem from="1683465919586" duration="2172000" />
       <workItem from="1683468383436" duration="871000" />
       <workItem from="1683620316276" duration="2930000" />
-      <workItem from="1683624167591" duration="5468000" />
+      <workItem from="1683624167591" duration="9098000" />
+      <workItem from="1683639885579" duration="1600000" />
+      <workItem from="1683641529282" duration="8000" />
     </task>
     <task id="LOCAL-00001" summary="유니티 파일 추가 (시작)&#10;+ 기본 UI 제작 (메인메뉴, 조작법, 인게임)&#10;+ 버튼매니저 제작">
       <created>1682864062099</created>
@@ -263,5 +256,24 @@
     <MESSAGE value="시도는 했지만 아직도 적 미사일 발사 구현중" />
     <MESSAGE value="원래대로 돌려둠" />
     <option name="LAST_COMMIT_MESSAGE" value="원래대로 돌려둠" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Assets/Scripts/G_Score.cs</url>
+          <line>31</line>
+          <properties documentPath="C:\Users\user\Documents\Repositories\Shooting\Assets\Scripts\G_Score.cs" initialLine="31" containingFunctionPresentation="method 'addscore'">
+            <startOffsets>
+              <option value="904" />
+            </startOffsets>
+            <endOffsets>
+              <option value="915" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

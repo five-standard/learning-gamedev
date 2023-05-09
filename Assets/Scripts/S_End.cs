@@ -8,5 +8,5 @@ public class S_End : MonoBehaviour
     
     //끝 화면에서 스코어 텍스트 수정
     void Start() {
-        EndScoreText.text = "Score : " + G_VMng.score; }
+        EndScoreText.text = "Score : " + G_Score.score; }
 }
