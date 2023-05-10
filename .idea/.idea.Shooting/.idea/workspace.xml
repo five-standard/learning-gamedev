@@ -3,15 +3,36 @@
   <component name="ChangeListManager">
     <list default="true" id="f3cdd046-277b-4991-9d51-07ab9ab5616a" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Shooting/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Shooting/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Image.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Image/Background.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Image/Background.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Image/Entity.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Image/Entity/Bullets.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Image/Entity/Bullets.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Image/Entity/Enemies.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Image/Entity/Enemies.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Image/Entity/Items.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Image/Entity/Items.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Image/Entity/Player.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Image/Entity/Player.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Image/Inventory.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Image/Inventory.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Image/Movement.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Image/Movement/Control_Attack.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Image/Movement/Control_Attack.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Image/Movement/Control_Heal.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Image/Movement/Control_Heal.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Image/Movement/Control_Item.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Image/Movement/Control_Item.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Image/Movement/Control_Move.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Image/Movement/Control_Move.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Image/bg_dark.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Image/bg_dark.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Enemy.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Enemy.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/S_Enemy.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/S_Enemy.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/S_Enemy.prefab.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/S_Enemy.prefab.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/Ingame.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Ingame.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/E_Bullet.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/E_Bullet.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/E_Enemy.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/E_Enemy.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/E_Player.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/E_Player.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/G_Score.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/G_Score.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/G_Spawn.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/G_Spawn.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/G_VMng.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/G_VMng.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/S_End.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/S_End.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -137,6 +158,8 @@
       <workItem from="1683624167591" duration="9098000" />
       <workItem from="1683639885579" duration="1600000" />
       <workItem from="1683641529282" duration="8000" />
+      <workItem from="1683692470791" duration="2943000" />
+      <workItem from="1683726343418" duration="1278000" />
     </task>
     <task id="LOCAL-00001" summary="유니티 파일 추가 (시작)&#10;+ 기본 UI 제작 (메인메뉴, 조작법, 인게임)&#10;+ 버튼매니저 제작">
       <created>1682864062099</created>

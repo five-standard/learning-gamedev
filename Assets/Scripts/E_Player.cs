@@ -16,9 +16,12 @@ public class E_Player : MonoBehaviour
     [SerializeField] public float playerSpeed = 10.0f;
     [SerializeField] public float hp = 100f;
     [SerializeField] public float durability = 100f;
+    [SerializeField] private Animator animator;
 
     //체력바, 연료바 초기화
-    private void Awake() {
+    private void Awake()
+    {
+        animator = gameObject.GetComponentInChildren<Animator>();
         HPtext.text = "HP (100%)";
         DRtext.text = "Fuel (100%)";
         durability = 100f;
@@ -40,6 +43,7 @@ public class E_Player : MonoBehaviour
     void Update() {
         float X = Input.GetAxisRaw("Horizontal");
         float Y = Input.GetAxisRaw("Vertical");
+        animator.SetFloat("X", X);
         
         //화면 벽 추가 (플레이어가 화면 밖으로 못 나가게)
         Vector3 pos = Camera.main.WorldToViewportPoint(transform.position);
