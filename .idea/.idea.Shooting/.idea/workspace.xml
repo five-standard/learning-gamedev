@@ -2,19 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f3cdd046-277b-4991-9d51-07ab9ab5616a" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/TO-DO.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/TO-DO.txt.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Shooting/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Shooting/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/End.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/End.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Animation/Boom_0.controller" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animation/Boom_0.controller" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Animation/Fix.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animation/Fix.anim" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/Ingame.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Ingame.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/E_Boss.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/E_Boss.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/E_Bullet.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/E_Bullet.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/E_Enemy.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/E_Enemy.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/E_Inven.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/E_Inven.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/E_Player.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/E_Player.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/G_Score.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/G_Score.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/G_Spawn.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/G_Spawn.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/S_End.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/S_End.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -42,6 +35,8 @@
     </option>
   </component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="mock://C:/Users/user/Documents/Repositories/Shooting/Assets/Animation/Boom_0.controller" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://C:/Users/user/Documents/Repositories/Shooting/Assets/Scenes/Ingame.unity" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/E_Boss.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/E_Explode.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/E_Item.cs" root0="FORCE_HIGHLIGHTING" />
@@ -56,7 +51,9 @@
   </component>
   <component name="MetaFilesCheckinStateConfiguration" checkMetaFiles="true" />
   <component name="ProjectId" id="2P9KP1OcSUfGIHS36dqPl9mkMvx" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -148,7 +145,7 @@
       <workItem from="1683781642249" duration="682000" />
       <workItem from="1683796222860" duration="25000" />
       <workItem from="1683796498914" duration="697000" />
-      <workItem from="1683809640552" duration="3989000" />
+      <workItem from="1683809640552" duration="5084000" />
     </task>
     <task id="LOCAL-00001" summary="유니티 파일 추가 (시작)&#10;+ 기본 UI 제작 (메인메뉴, 조작법, 인게임)&#10;+ 버튼매니저 제작">
       <created>1682864062099</created>
