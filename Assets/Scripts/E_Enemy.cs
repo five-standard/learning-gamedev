@@ -2,7 +2,6 @@ using UnityEngine;
 
 public class E_Enemy : MonoBehaviour
 {
-    
     [SerializeField] public float enemySpeed = 7;
     
     //화면에 움직임 반영

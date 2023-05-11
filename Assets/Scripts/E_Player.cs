@@ -1,14 +1,11 @@
 using System.Collections;
 using TMPro;
-using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class E_Player : MonoBehaviour
 {
-    [SerializeField] private TextMeshProUGUI HPtext;
-    [SerializeField] private TextMeshProUGUI DRtext;
     [SerializeField] private Slider HPSl;
     [SerializeField] private Slider DRSl;
     [SerializeField] private GameObject Missile;
@@ -16,14 +13,14 @@ public class E_Player : MonoBehaviour
     [SerializeField] public float playerSpeed = 10.0f;
     [SerializeField] public float hp = 100f;
     [SerializeField] public float durability = 100f;
+    [SerializeField] private float durabadd = 10;
     [SerializeField] private Animator animator;
+    [SerializeField] private GameObject explosion;
 
     //체력바, 연료바 초기화
     private void Awake()
     {
         animator = gameObject.GetComponentInChildren<Animator>();
-        HPtext.text = "HP (100%)";
-        DRtext.text = "Fuel (100%)";
         durability = 100f;
         DRSl.value = 100f;
         StartCoroutine(DurabilityCor()); }
@@ -34,7 +31,6 @@ public class E_Player : MonoBehaviour
         if (durability == 0) {
             SceneManager.LoadScene("End");
             StopCoroutine(DurabilityCor()); }
-        DRtext.text = "Fuel (" + durability + "%)";
         DRSl.value = durability;
         yield return new WaitForSeconds((float)0.65);
         StartCoroutine(DurabilityCor()); } 
@@ -63,13 +59,18 @@ public class E_Player : MonoBehaviour
     //적 오브젝트, 적 총알 감지
     private void OnTriggerEnter2D(Collider2D col) {
         if (col.tag.Equals("Enemy") || col.tag.Equals("EnemyBullet")) {
+            Instantiate(explosion, col.transform.position, Quaternion.identity);
             Destroy(col.gameObject);
             if (hp > 0) {
                 hp -= 5;
                 if (hp == 0) {
                     SceneManager.LoadScene("End"); 
                     StopCoroutine(DurabilityCor()); }
-                HPtext.text = "HP (" + hp + "%)";
-                HPSl.value = hp; } } }
-}
+                HPSl.value = hp; } }
+        else if (col.tag.Equals("Fuel"))
+        {
+            Destroy(col.gameObject);
+            durability += durabadd;
+            if (durability >= 101) {
+                durability = 100; } } } }
         

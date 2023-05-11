@@ -5,7 +5,7 @@ using UnityEngine;
 public class G_Score : MonoBehaviour {
     [SerializeField] private TextMeshProUGUI Scoretext;
     [SerializeField] private TextMeshProUGUI Leveltext;
-    [SerializeField] public int level = 1;
+    public static int level = 1;
     public static float maxscore = 100;
     public static int scoreToAdd = 10;
     public static float score = 0; 
@@ -20,14 +20,14 @@ public class G_Score : MonoBehaviour {
     private void Start() {
         score = 0;
         level = 1;
-        Scoretext.text = "0 Score";
-        Leveltext.text = "1 Level"; }
+        Scoretext.text = "Score 0";
+        Leveltext.text = "Level 1"; }
 
     //점수 추가 함수
     public void addscore(int num) {
         if (E_Boss.BossSpawned == false) {
             score += num;
-            Scoretext.text = score + " Score";
+            Scoretext.text = "Score " + score;
             if (score >= maxscore) {
                 E_Boss.E_Boss2.SpawnBoss(); } } }
 }
