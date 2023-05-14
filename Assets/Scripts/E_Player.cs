@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
-public class E_Player : MonoBehaviour
+public class E_Player : MonoBehaviour 
 {
     [SerializeField] private Slider HPSl;
     [SerializeField] private Slider DRSl;
@@ -18,22 +18,30 @@ public class E_Player : MonoBehaviour
     [SerializeField] private GameObject explosion;
 
     //체력바, 연료바 초기화
-    private void Awake()
+    private void Awake() 
     {
         animator = gameObject.GetComponentInChildren<Animator>();
         durability = 100f;
         DRSl.value = 100f;
-        StartCoroutine(DurabilityCor()); }
+        StartCoroutine(DurabilityCor()); 
+    }
 
     //1초마다 내구도 차감
-    private IEnumerator DurabilityCor() {
-        durability--;
-        if (durability == 0) {
-            SceneManager.LoadScene("End");
-            StopCoroutine(DurabilityCor()); }
-        DRSl.value = durability;
-        yield return new WaitForSeconds((float)0.65);
-        StartCoroutine(DurabilityCor()); } 
+    private IEnumerator DurabilityCor() 
+    {
+        if (E_BossSpawn.BossSpawned == false)
+        {
+            durability -= 2.5f;
+            if (durability == 0) 
+            {
+                SceneManager.LoadScene("End");
+                StopCoroutine(DurabilityCor()); 
+            }
+            DRSl.value = durability;
+            yield return new WaitForSeconds((float)0.65);
+            StartCoroutine(DurabilityCor()); 
+        }
+    } 
 
     //플레이어 이동
     void Update() {
@@ -57,20 +65,33 @@ public class E_Player : MonoBehaviour
             rb.AddForce(transform.up * missileSpeed, ForceMode2D.Impulse); } }
     
     //적 오브젝트, 적 총알 감지
-    private void OnTriggerEnter2D(Collider2D col) {
-        if (col.tag.Equals("Enemy") || col.tag.Equals("EnemyBullet")) {
+    private void OnTriggerEnter2D(Collider2D col) 
+    {
+        if (col.tag.Equals("Enemy") || col.tag.Equals("EnemyBullet")) 
+        {
             Instantiate(explosion, col.transform.position, Quaternion.identity);
             Destroy(col.gameObject);
-            if (hp > 0) {
+            if (hp > 0) 
+            {
                 hp -= 5;
-                if (hp == 0) {
+                if (hp == 0) 
+                {
                     SceneManager.LoadScene("End"); 
-                    StopCoroutine(DurabilityCor()); }
-                HPSl.value = hp; } }
-        else if (col.tag.Equals("Fuel"))
+                    StopCoroutine(DurabilityCor()); 
+                }
+                HPSl.value = hp; 
+            } 
+        }
+        else if (col.tag.Equals("Fuel")) 
         {
             Destroy(col.gameObject);
             durability += durabadd;
-            if (durability >= 101) {
-                durability = 100; } } } }
+            if (durability >= 101) 
+            {
+                durability = 100; 
+            } 
+            DRSl.value = durability;
+        } 
+    } 
+}
         
