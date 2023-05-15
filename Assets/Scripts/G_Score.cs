@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class G_Score : MonoBehaviour 
 {
-    [SerializeField] private TextMeshProUGUI Scoretext;
-    [SerializeField] private TextMeshProUGUI Leveltext;
+    [SerializeField] public TextMeshProUGUI Scoretext;
+    [SerializeField] public TextMeshProUGUI Leveltext;
     public static int level = 1;
     public static float maxscore = 100;
     public static int scoreToAdd = 10;
@@ -20,8 +20,10 @@ public class G_Score : MonoBehaviour
     }
     
     //점수 값 설정 (텍스트 설정)
-    private void Start() 
+    private void Start()
     {
+        maxscore = 100;
+        scoreToAdd = 10;
         score = 0;
         level = 1;
         Scoretext.text = "Score 0";

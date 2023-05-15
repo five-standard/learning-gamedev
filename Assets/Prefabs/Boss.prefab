@@ -119,7 +119,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -169,4 +169,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   explosion: {fileID: 6707322226409167024, guid: d273214a9ef73874582d174d2ca3c51a, type: 3}
+  healItem: {fileID: 1585779552973330139, guid: b0634bf390062b84e981bc1fe9c7940d, type: 3}
+  bullet: {fileID: 3695922016939638588, guid: d53480d9346e0004b9a21f4f1261ab94, type: 3}
   bossBar: {fileID: 0}

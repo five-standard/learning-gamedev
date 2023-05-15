@@ -8,6 +8,7 @@ TagManager:
   - EnemyBullet
   - Fuel
   - Boss
+  - AllUp
   layers:
   - Default
   - TransparentFX

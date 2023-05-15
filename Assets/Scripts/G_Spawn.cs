@@ -21,6 +21,7 @@ public class G_Spawn : MonoBehaviour
 
     private void Start()
     {
+        spNum = 1;
         StartCoroutine(SpawnEnemy());
     }
 
@@ -33,8 +34,8 @@ public class G_Spawn : MonoBehaviour
             {
                 Instantiate(enemy, new Vector2(Random.Range(-8.41f, 8.41f), 5.55f), Quaternion.identity);
             }
-            yield return new WaitForSeconds(enemy_Spawn);
-            StartCoroutine(SpawnEnemy());
         }
+        yield return new WaitForSeconds(enemy_Spawn);
+        StartCoroutine(SpawnEnemy());
     }
 }

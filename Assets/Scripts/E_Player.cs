@@ -38,9 +38,9 @@ public class E_Player : MonoBehaviour
                 StopCoroutine(DurabilityCor()); 
             }
             DRSl.value = durability;
-            yield return new WaitForSeconds((float)0.65);
-            StartCoroutine(DurabilityCor()); 
         }
+        yield return new WaitForSeconds((float)0.65);
+        StartCoroutine(DurabilityCor()); 
     } 
 
     //플레이어 이동
@@ -91,6 +91,14 @@ public class E_Player : MonoBehaviour
                 durability = 100; 
             } 
             DRSl.value = durability;
+        } 
+        else if (col.tag.Equals("AllUp")) 
+        {
+            Destroy(col.gameObject);
+            durability = 100;
+            DRSl.value = durability;
+            hp = 100;
+            HPSl.value = hp;
         } 
     } 
 }

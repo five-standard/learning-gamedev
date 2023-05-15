@@ -3,24 +3,17 @@
   <component name="ChangeListManager">
     <list default="true" id="f3cdd046-277b-4991-9d51-07ab9ab5616a" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Shooting/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Shooting/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Animation/Boom_0.controller" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Animation/Boom_0.controller.meta" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Boss.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Boss.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Enemy.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Enemy.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/FuelUp.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/FuelUp.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Player_Bullet.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Player_Bullet.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/S_Enemy.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/S_Enemy.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/ControlHelp.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/ControlHelp.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/Ingame.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Ingame.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/E_Boss.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/E_Boss.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/E_Boss.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/E_Boss.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/E_BossSpawn.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/E_BossSpawn.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/E_Bullet.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/E_Bullet.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/E_Enemy.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/E_Enemy.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/E_Explode.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/E_Explode.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/E_Item.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/E_Item.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/E_Item.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/E_Item.cs.meta" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/E_Player.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/E_Player.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/G_Score.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/G_Score.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/G_Spawn.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/G_Spawn.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/S_End.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/S_End.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/TO-DO.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/TO-DO.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" afterDir="false" />
     </list>
@@ -50,9 +43,12 @@
     </option>
   </component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="mock://C:/Users/user/Documents/Repositories/Shooting/Assets/Prefabs/Boss.prefab" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://C:/Users/user/Documents/Repositories/Shooting/Assets/Prefabs/Boss.prefab" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/E_AllUp.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/E_BBullet.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/E_Boss.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/E_Explode.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/E_Item.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/G_TextB.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$USER_HOME$/My project/Assets/Script/EndCode.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$USER_HOME$/My project/Assets/Script/PlayerControl.cs" root0="SKIP_HIGHLIGHTING" />
@@ -120,10 +116,10 @@
       </option>
       <method v="2" />
     </configuration>
-    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost">
+    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost" ignored-value-for-modified-check="22076">
       <option name="allowRunningInParallel" value="false" />
       <option name="listenPortForConnections" value="false" />
-      <option name="pid" />
+      <option name="pid" value="22076" />
       <option name="projectPathOnTarget" />
       <option name="selectedOptions">
         <list />
@@ -164,7 +160,8 @@
       <workItem from="1683796498914" duration="697000" />
       <workItem from="1683809640552" duration="5122000" />
       <workItem from="1683885301061" duration="5660000" />
-      <workItem from="1684045765803" duration="14337000" />
+      <workItem from="1684045765803" duration="14560000" />
+      <workItem from="1684106276342" duration="13459000" />
     </task>
     <task id="LOCAL-00001" summary="유니티 파일 추가 (시작)&#10;+ 기본 UI 제작 (메인메뉴, 조작법, 인게임)&#10;+ 버튼매니저 제작">
       <created>1682864062099</created>
@@ -306,13 +303,13 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="DotNet Breakpoints">
           <url>file://$PROJECT_DIR$/Assets/Scripts/G_Score.cs</url>
-          <line>39</line>
+          <line>41</line>
           <properties documentPath="C:\Users\user\Documents\Repositories\Shooting\Assets\Scripts\G_Score.cs" initialLine="31" containingFunctionPresentation="method 'addscore'">
             <startOffsets>
-              <option value="950" />
+              <option value="996" />
             </startOffsets>
             <endOffsets>
-              <option value="952" />
+              <option value="998" />
             </endOffsets>
           </properties>
           <option name="timeStamp" value="1" />

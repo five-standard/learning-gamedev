@@ -2,23 +2,28 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Threading;
+using Unity.Mathematics;
 using UnityEngine;
-using UnityEngine.UI;
 using Random = UnityEngine.Random;
 
 public class E_Boss : MonoBehaviour
 {
     [SerializeField] private GameObject explosion;
+    [SerializeField] private GameObject healItem;
+    [SerializeField] private GameObject bullet;
+    private int itemSummon = 0;
     private int bombTime = 0;
-    public Slider bossBar;
     public static bool bossMove = false;
     public static bool bossDie = false;
     public static float bossHP = 100f;
     public static E_Boss E_boss;
+    public static int Pattern = 0;
 
     private void Awake()
     {
         bombTime = 0;
+        bossHP = 100f;
+        //bossBar.value = 100f;
         if (!E_boss)
         {
             E_boss = this;
@@ -32,10 +37,11 @@ public class E_Boss : MonoBehaviour
         {
             if (!transform.position.Equals(new Vector2(transform.position.x, 3.4f)))
             {
-                transform.position = Vector2.MoveTowards(transform.position, (new Vector2(transform.position.x, 3.4f)), 0.05f);
+                transform.position = Vector2.MoveTowards(transform.position, (new Vector2(transform.position.x, 3.4f)), 0.01f);
             }
             else
             {
+                StartCoroutine(bossPattern());
                 bossMove = false;
             }
         }
@@ -43,7 +49,7 @@ public class E_Boss : MonoBehaviour
         {
             if (!transform.position.Equals(new Vector2(transform.position.x, 7.5f)))
             {
-                transform.position = Vector2.MoveTowards(transform.position, (new Vector2(transform.position.x, 7.5f)), 0.004f);
+                transform.position = Vector2.MoveTowards(transform.position, (new Vector2(transform.position.x, 7.5f)), 0.01f);
             }
             else
             {
@@ -55,24 +61,36 @@ public class E_Boss : MonoBehaviour
 
     public void bossDead()
     {
+        StopCoroutine(bossPattern());
         bossDie = true;
         StartCoroutine(bossExplosion());
         E_BossSpawn.E_Boss2.bossBar.SetActive(false);
         E_BossSpawn.E_Boss2.bossBt.SetActive(false);
+        bossHP += 10;
         G_Score.level++;
         G_Score.score=0;
-        G_Spawn.enemy_Spawn -= 0.15f;
-        if (G_Score.level %3 == 0)
+        G_Spawn.enemy_Spawn -= 0.05f;
+        itemSummon = Random.Range(1, 101);
+        if (itemSummon > 50)
+        {
+            Instantiate(healItem, transform.position, Quaternion.identity);
+        }
+        if (G_Score.level %5 == 0)
         {
             G_Spawn.spNum++; 
         }
-        Invoke("BossEnd", 5);
+
+        if (G_Score.level % 3 == 0)
+        {
+            G_Score.scoreToAdd += 5;
+        }
+        Invoke(nameof(BossEnd), 0.05f);
     }
     
     private IEnumerator bossExplosion() {
         Instantiate(explosion, (new Vector2(Random.Range(2.5f, -2.5f), transform.position.y+2)), Quaternion.identity);
         yield return new WaitForSeconds(1);
-        if (bombTime < 5)
+        if (bombTime < 4)
         {
             bombTime++;
             StartCoroutine(bossExplosion());
@@ -81,6 +99,29 @@ public class E_Boss : MonoBehaviour
 
     private void BossEnd()
     {
+        G_Score.instance.Scoretext.text = "Score 0";
+        G_Score.instance.Leveltext.text = "Level " + G_Score.level; 
         E_BossSpawn.BossSpawned = false;
+    }
+
+    //보스 패턴 부분
+    // ReSharper disable Unity.PerformanceAnalysis
+    private IEnumerator bossPattern()
+    {
+        Pattern = Random.Range(0, G_Score.level+1);
+        switch (Pattern)
+        {
+            case 0:
+                for (int i = 0; i < 5; i++)
+                {
+                    Instantiate(bullet, transform.position, quaternion.RotateY(180));
+                }
+                break;
+            
+            case 1:
+                break;
+        }
+        yield return new WaitForSeconds(1f);
+        StartCoroutine(bossPattern());
     }
 }

@@ -40,13 +40,18 @@ public class E_Bullet : MonoBehaviour
             if (E_Boss.bossDie == false)
             {
                 E_Boss.bossHP -= Random.Range(1, 9);
-                E_Boss.E_boss.bossBar.value = E_Boss.bossHP;
+                E_BossSpawn.E_Boss2.BossBar.value = E_Boss.bossHP;
                 Instantiate(explosion, transform.position, Quaternion.identity);
                 if (E_Boss.bossHP <= 0)
                 {
                     E_Boss.E_boss.bossDead();
                 }
             }
+        }
+        else if (col.tag.Equals("EnemyBullet"))
+        {
+            Destroy(gameObject);
+            Destroy(col.gameObject);
         }
     } 
 }
