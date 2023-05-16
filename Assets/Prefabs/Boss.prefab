@@ -170,5 +170,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   explosion: {fileID: 6707322226409167024, guid: d273214a9ef73874582d174d2ca3c51a, type: 3}
   healItem: {fileID: 1585779552973330139, guid: b0634bf390062b84e981bc1fe9c7940d, type: 3}
-  bullet: {fileID: 3695922016939638588, guid: d53480d9346e0004b9a21f4f1261ab94, type: 3}
-  bossBar: {fileID: 0}
+  bullet: {fileID: 5510495723416257642, guid: 80f8c9ec854f221469ac8147c297385d, type: 3}

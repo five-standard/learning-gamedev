@@ -16,10 +16,16 @@ public class E_Player : MonoBehaviour
     [SerializeField] private float durabadd = 10;
     [SerializeField] private Animator animator;
     [SerializeField] private GameObject explosion;
+    public static E_Player E_Player2;
+    public GameObject player;
 
     //체력바, 연료바 초기화
-    private void Awake() 
+    private void Awake()
     {
+        if (!E_Player2)
+        {
+            E_Player2 = this;
+        }
         animator = gameObject.GetComponentInChildren<Animator>();
         durability = 100f;
         DRSl.value = 100f;

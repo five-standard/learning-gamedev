@@ -1,10 +1,10 @@
-using System;
 using System.Collections;
-using System.Collections.Generic;
-using System.Threading;
+using System.Numerics;
 using Unity.Mathematics;
 using UnityEngine;
+using Quaternion = UnityEngine.Quaternion;
 using Random = UnityEngine.Random;
+using Vector2 = UnityEngine.Vector2;
 
 public class E_Boss : MonoBehaviour
 {
@@ -18,7 +18,9 @@ public class E_Boss : MonoBehaviour
     public static float bossHP = 100f;
     public static E_Boss E_boss;
     public static int Pattern = 0;
-
+    public static int cnt = 0;
+    public static int Rotation = -75;
+    
     private void Awake()
     {
         bombTime = 0;
@@ -108,20 +110,76 @@ public class E_Boss : MonoBehaviour
     // ReSharper disable Unity.PerformanceAnalysis
     private IEnumerator bossPattern()
     {
-        Pattern = Random.Range(0, G_Score.level+1);
-        switch (Pattern)
         {
-            case 0:
-                for (int i = 0; i < 5; i++)
-                {
-                    Instantiate(bullet, transform.position, quaternion.RotateY(180));
-                }
-                break;
+            cnt = 0;
+            Pattern = Random.Range(1, 2);
+            switch (Pattern)
+            {
+                case 0:
+                    StartCoroutine(fireShoot());
+                    StopCoroutine(bossPattern());
+                    break;
             
-            case 1:
-                break;
+                case 1:
+                    StartCoroutine(fireRotate());
+                    StopCoroutine(bossPattern());
+                    break;
+            
+                case 2:
+                    
+                    StopCoroutine(bossPattern());
+                    break;
+            
+                case 3:
+                    
+                    StopCoroutine(bossPattern());
+                    break;
+            
+                case 4:
+                    
+                    StopCoroutine(bossPattern());
+                    break;
+            
+                case 5:
+                    
+                    StopCoroutine(bossPattern());
+                    break;
+            }
+            yield return new WaitForSeconds(1.5f);
         }
-        yield return new WaitForSeconds(1f);
-        StartCoroutine(bossPattern());
+    }
+
+    private IEnumerator fireShoot()
+    {
+        GameObject Bullet = Instantiate(bullet, transform.position, quaternion.identity);
+        Rigidbody2D rigid = Bullet.GetComponent<Rigidbody2D>();
+        rigid.AddForce(Vector2.down*5, ForceMode2D.Impulse);
+        yield return new WaitForSeconds(0.5f);
+        if (cnt < 5)
+        {
+            cnt++;
+            StartCoroutine(fireShoot());
+        }
+        else
+        {
+            StartCoroutine(bossPattern());
+        }
+    }
+
+    private IEnumerator fireRotate()
+    { 
+        Instantiate(bullet, transform.position, Quaternion.Euler(0, 0, Rotation));
+        Rotation -= 5;
+        yield return new WaitForSeconds(0.15f);
+        if (cnt < 100)
+        {
+            cnt++;
+            StartCoroutine(fireRotate());
+        }
+        else
+        {
+            Rotation = -75;
+            StartCoroutine(bossPattern());
+        }
     }
 }

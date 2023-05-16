@@ -4,18 +4,19 @@
     <list default="true" id="f3cdd046-277b-4991-9d51-07ab9ab5616a" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Shooting/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Shooting/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Boss.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Boss.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/ControlHelp.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/ControlHelp.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Boss_Bullet.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Boss_Bullet.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Explosion.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Explosion.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/Ingame.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Ingame.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/MainMenu.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/MainMenu.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Ranking.unity" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Ranking.unity.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/E_BBullet.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/E_BBullet.cs.meta" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/E_Boss.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/E_Boss.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/E_BossSpawn.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/E_BossSpawn.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/E_Bullet.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/E_Bullet.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/E_Item.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/E_Item.cs.meta" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/E_Player.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/E_Player.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/G_Score.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/G_Score.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/G_Spawn.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/G_Spawn.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/TO-DO.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/TO-DO.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/TO-DO.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/TO-DO.txt.meta" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -43,8 +44,6 @@
     </option>
   </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="mock://C:/Users/user/Documents/Repositories/Shooting/Assets/Prefabs/Boss.prefab" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://C:/Users/user/Documents/Repositories/Shooting/Assets/Prefabs/Boss.prefab" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/E_AllUp.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/E_BBullet.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/E_Boss.cs" root0="FORCE_HIGHLIGHTING" />
@@ -116,10 +115,10 @@
       </option>
       <method v="2" />
     </configuration>
-    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost" ignored-value-for-modified-check="22076">
+    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost">
       <option name="allowRunningInParallel" value="false" />
       <option name="listenPortForConnections" value="false" />
-      <option name="pid" value="22076" />
+      <option name="pid" />
       <option name="projectPathOnTarget" />
       <option name="selectedOptions">
         <list />
@@ -161,7 +160,8 @@
       <workItem from="1683809640552" duration="5122000" />
       <workItem from="1683885301061" duration="5660000" />
       <workItem from="1684045765803" duration="14560000" />
-      <workItem from="1684106276342" duration="13459000" />
+      <workItem from="1684106276342" duration="13509000" />
+      <workItem from="1684223602949" duration="11007000" />
     </task>
     <task id="LOCAL-00001" summary="유니티 파일 추가 (시작)&#10;+ 기본 UI 제작 (메인메뉴, 조작법, 인게임)&#10;+ 버튼매니저 제작">
       <created>1682864062099</created>
@@ -247,7 +247,14 @@
       <option name="project" value="LOCAL" />
       <updated>1683815441851</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="보스 기능 일부 완성&#10;(패턴, 랭킹만 남음)">
+      <created>1684149911719</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1684149911719</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -296,7 +303,8 @@
     <MESSAGE value="원래대로 돌려둠" />
     <MESSAGE value="플레이어 애니메이션 추가" />
     <MESSAGE value="To-Do 리스트 추가" />
-    <option name="LAST_COMMIT_MESSAGE" value="To-Do 리스트 추가" />
+    <MESSAGE value="보스 기능 일부 완성&#10;(패턴, 랭킹만 남음)" />
+    <option name="LAST_COMMIT_MESSAGE" value="보스 기능 일부 완성&#10;(패턴, 랭킹만 남음)" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
