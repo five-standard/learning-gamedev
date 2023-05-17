@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Numerics;
+using JetBrains.Annotations;
 using Unity.Mathematics;
 using UnityEngine;
 using Quaternion = UnityEngine.Quaternion;
@@ -20,6 +21,9 @@ public class E_Boss : MonoBehaviour
     public static int Pattern = 0;
     public static int cnt = 0;
     public static int Rotation = -75;
+    public static int spNUM;
+    public static float removeNUM;
+    [CanBeNull] public static string Wpt = "Null";
     
     private void Awake()
     {
@@ -91,6 +95,8 @@ public class E_Boss : MonoBehaviour
     
     private IEnumerator bossExplosion() {
         Instantiate(explosion, (new Vector2(Random.Range(2.5f, -2.5f), transform.position.y+2)), Quaternion.identity);
+        StopCoroutine(fireRotate());
+        StopCoroutine(fireRandom());
         yield return new WaitForSeconds(1);
         if (bombTime < 4)
         {
@@ -112,16 +118,18 @@ public class E_Boss : MonoBehaviour
     {
         {
             cnt = 0;
-            Pattern = Random.Range(1, 2);
+            Pattern = Random.Range(0, 2);
             switch (Pattern)
             {
                 case 0:
-                    StartCoroutine(fireShoot());
+                    Wpt = "Rotate";
+                    StartCoroutine(fireRotate());
                     StopCoroutine(bossPattern());
                     break;
             
                 case 1:
-                    StartCoroutine(fireRotate());
+                    Wpt = "Random";
+                    StartCoroutine(fireRandom());
                     StopCoroutine(bossPattern());
                     break;
             
@@ -139,39 +147,18 @@ public class E_Boss : MonoBehaviour
                     
                     StopCoroutine(bossPattern());
                     break;
-            
-                case 5:
-                    
-                    StopCoroutine(bossPattern());
-                    break;
             }
-            yield return new WaitForSeconds(1.5f);
+            yield return new WaitForSeconds(1f);
         }
     }
-
-    private IEnumerator fireShoot()
-    {
-        GameObject Bullet = Instantiate(bullet, transform.position, quaternion.identity);
-        Rigidbody2D rigid = Bullet.GetComponent<Rigidbody2D>();
-        rigid.AddForce(Vector2.down*5, ForceMode2D.Impulse);
-        yield return new WaitForSeconds(0.5f);
-        if (cnt < 5)
-        {
-            cnt++;
-            StartCoroutine(fireShoot());
-        }
-        else
-        {
-            StartCoroutine(bossPattern());
-        }
-    }
+    
 
     private IEnumerator fireRotate()
     { 
         Instantiate(bullet, transform.position, Quaternion.Euler(0, 0, Rotation));
-        Rotation -= 5;
+        Rotation += 5;
         yield return new WaitForSeconds(0.15f);
-        if (cnt < 100)
+        if (cnt < 20)
         {
             cnt++;
             StartCoroutine(fireRotate());
@@ -179,6 +166,25 @@ public class E_Boss : MonoBehaviour
         else
         {
             Rotation = -75;
+            Wpt = "Null";
+            StartCoroutine(bossPattern());
+        }
+    }
+
+    private IEnumerator fireRandom()
+    {
+        Rotation = Random.Range(0, -75);
+        Instantiate(bullet, transform.position, Quaternion.Euler(0, 0, Rotation));
+        yield return new WaitForSeconds(0.1f);
+        if (cnt < 30)
+        {
+            cnt++;
+            StartCoroutine(fireRandom());
+        }
+        else
+        {
+            Rotation = -75;
+            Wpt = "Null";
             StartCoroutine(bossPattern());
         }
     }
